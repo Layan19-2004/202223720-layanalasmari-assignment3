@@ -159,20 +159,45 @@ body.dark-mode select {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-body.dark-mode .btn {
-    color: #111827;
-}
-
 .btn:hover {
     background: var(--btn-hover);
     transform: translateY(-2px);
 }
 
-.secondary-btn {
-    background: #6b7280;
-    color: white;
+/* Main button text in dark mode */
+body.dark-mode .btn {
+    color: #111827;
 }
 
+/* Toggle theme button */
+.secondary-btn {
+    background: white;
+    color: #111827;
+    border: 1px solid var(--border-color);
+    min-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondary-btn:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* Toggle button in dark mode */
+body.dark-mode .secondary-btn {
+    background: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: #4b5563;
+    color: #f9fafb;
+}
+
+/* Small button (Save Name) */
 .small-btn {
     margin-top: 0;
 }
