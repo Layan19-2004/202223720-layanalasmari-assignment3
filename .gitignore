@@ -1,0 +1,29 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency Folders
+node_modules/
+
+# Environment Files
+.env
+
+# Build / Coverage
+dist/
+build/
+coverage/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Mac System Files
+.AppleDouble
+.LSOverride
