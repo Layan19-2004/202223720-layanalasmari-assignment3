@@ -30,8 +30,16 @@ if (greetingElement) {
     greetingElement.textContent = greeting;
 }
 
-// ===== Theme Toggle with localStorage =====
+// ===== Theme Toggle with Dynamic Text =====
 const themeToggle = document.getElementById("themeToggle");
+
+function updateThemeButtonText() {
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Light Mode";
+    } else {
+        themeToggle.textContent = "Dark Mode";
+    }
+}
 
 function applySavedTheme() {
     const savedTheme = localStorage.getItem("theme");
@@ -39,6 +47,8 @@ function applySavedTheme() {
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
     }
+
+    updateThemeButtonText();
 }
 
 applySavedTheme();
@@ -52,6 +62,8 @@ if (themeToggle) {
         } else {
             localStorage.setItem("theme", "light");
         }
+
+        updateThemeButtonText();
     });
 }
 
